@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+<input type="text" id="txtizq">
+<input type="text" id="txtder">
+<button id="btnmov"> Mover Cajas</button>
+<button id="btnEliminar">Eliminar Contenido</button>
+
+
+
+
+<script>
+
+function moverTexts(e)
+
+{
+	var elemDer=document.getElementById("txtder").value;
+	document.getElementById("txtder").value=document.getElementById("txtizq").value;
+	document.getElementById("txtizq").value=elemDer;
+	
+	
+	
+	}
+	
+	
+	function eliminarTexts(e)
+	
+	{
+		document.getElementById("txtizq").value="";
+		document.getElementById("txtder").value="";
+		
+		
+	}
+
+btnmov.addEventListener("click",moverTexts);
+btnEliminar.addEventListener("click",eliminarTexts);
+
+</script>
+
+</body>
+</html>
